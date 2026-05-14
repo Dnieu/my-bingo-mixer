@@ -17,33 +17,33 @@ export function GameScreen({
   onReset,
 }: GameScreenProps) {
   return (
-    <div className="flex flex-col min-h-full bg-gray-50">
+    <div className="flex flex-col min-h-full bg-coffee-bg">
       {/* Header */}
-      <header className="flex items-center justify-between p-3 bg-white border-b border-gray-200">
+      <header className="flex items-center justify-between p-4 bg-coffee-card border-b-2 border-accent/30 shadow-sm">
         <button
           onClick={onReset}
-          className="text-gray-500 text-sm px-3 py-1.5 rounded active:bg-gray-100"
+          className="text-coffee-text text-sm px-4 py-2 rounded-lg bg-accent/10 hover:bg-accent/20 active:bg-accent/30 transition-colors font-medium"
         >
-          ← Back
+          ← Back to Menu
         </button>
-        <h1 className="font-bold text-gray-900">Bingo Mixer</h1>
-        <div className="w-16"></div>
+        <h1 className="font-bold text-coffee-text text-xl font-serif">☕ Cozy Coffee Bingo</h1>
+        <div className="w-20"></div>
       </header>
 
       {/* Instructions */}
-      <p className="text-center text-gray-500 text-sm py-2 px-4">
-        Tap a square when you find someone who matches it.
+      <p className="text-center text-coffee-text text-sm py-3 px-4 italic">
+        Tap a square when you find someone who matches the coffee question.
       </p>
 
       {/* Bingo indicator */}
       {hasBingo && (
-        <div className="bg-amber-100 text-amber-800 text-center py-2 font-semibold text-sm">
-          🎉 BINGO! You got a line!
+        <div className="bg-bingo/20 text-bingo text-center py-3 font-bold text-sm border-y border-bingo/30">
+          🎉 FREE COFFEE! You got a line!
         </div>
       )}
 
       {/* Board */}
-      <div className="flex-1 flex items-center justify-center p-3">
+      <div className="flex-1 flex items-center justify-center p-4">
         <BingoBoard
           board={board}
           winningSquareIds={winningSquareIds}

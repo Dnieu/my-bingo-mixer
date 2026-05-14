@@ -1,11 +1,14 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-accent: #2563eb;
-  --color-accent-light: #3b82f6;
-  --color-marked: #dcfce7;
-  --color-marked-border: #22c55e;
-  --color-bingo: #fbbf24;
+  --color-accent: #8b4513; /* Saddle brown for coffee */
+  --color-accent-light: #a0522d; /* Sienna for lighter coffee */
+  --color-marked: #f5deb3; /* Wheat for cream/coffee stain */
+  --color-marked-border: #daa520; /* Goldenrod for crema */
+  --color-bingo: #cd853f; /* Peru for cinnamon */
+  --color-coffee-bg: #f4f1ea; /* Warm parchment */
+  --color-coffee-card: #fff8dc; /* Cornsilk for menu cards */
+  --color-coffee-text: #654321; /* Dark brown for text */
 }
 
 html,
@@ -16,6 +19,9 @@ body,
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: linear-gradient(135deg, var(--color-coffee-bg) 0%, #e8dcc0 100%);
+  color: var(--color-coffee-text);
   -webkit-tap-highlight-color: transparent;
+  line-height: 1.6;
 }
